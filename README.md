@@ -1,2 +1,2 @@
 # Signal
-final game for cmpm 120 and atrg 120
+final game for cmpm 120 and artg 120
