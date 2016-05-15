@@ -108,6 +108,10 @@ function update(){
 	else{
 	clickMusic.volume = 0.3;
 	}
+	
+	if(mainmenu==false && options == false){
+		//gamecode here
+	}
 }
 
 function game_loop() {
