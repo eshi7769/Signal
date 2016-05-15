@@ -24,7 +24,7 @@ var textPositionY = pictureA.height + 10;
 //handles all the click interactions
 function handleClicks(eventParams) {
   nameText = "X: " + eventParams.clientX + " Y: " + eventParams.clientY; //gets click position
-  if(mainmenu == true){
+  if(mainmenu == true){						//mainmenu interactions
 	if(eventParams.clientX > 385 && eventParams.clientY > 310 && eventParams.clientX < 505
 	&& eventParams.clientY < 340){
 			clickMusic.play();
@@ -36,8 +36,12 @@ function handleClicks(eventParams) {
 			mainmenu = false;
 			options = true;
 	}
+	if(eventParams.clientX > 380 && eventParams.clientY > 475 && eventParams.clientX < 515
+	&& eventParams.clientY < 500){
+		window.close();				//exit window (Exit game)
+	}
   }
-  if(options == true){
+  if(options == true){				//options interactions
 	  if(eventParams.clientX > 60 && eventParams.clientY > 70 && eventParams.clientX < 110
 	&& eventParams.clientY < 90){
 		if(volumelevel>0){
@@ -57,7 +61,7 @@ function handleClicks(eventParams) {
 		mainmenu = true;
 	}
   }
-  if(options == false && mainmenu == false){
+  if(options == false && mainmenu == false){	//new game interactions
 	  if(eventParams.clientX > 60 && eventParams.clientY > 540 && eventParams.clientX < 115
 	&& eventParams.clientY < 560){
 		clickMusic.play();
